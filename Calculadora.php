@@ -30,7 +30,7 @@ class Calculadora
     public function expoente($expoente)
     {
         if ($expoente == 0) {
-            throw new Exception("Expoente não pode ser 0");
+            throw new \Exception("Expoente não pode ser 0");
         }
         $this->total **= $expoente;
         return $this;
