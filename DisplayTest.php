@@ -10,6 +10,8 @@ use App\JSONType;
 
 class DisplayTest extends TestCase
 {
+    // Método para capturar dados de cliente
+    // para o teste
     public function getCliente()
     {
         return [
@@ -22,6 +24,7 @@ class DisplayTest extends TestCase
         ];
     }
 
+    // Método parar validar retorno em XML
     public function testValidaSaidaDeXML()
     {
         $displayer = new Displayer($this->getCliente(), new XMLType);
@@ -36,7 +39,8 @@ class DisplayTest extends TestCase
              </cliente>'
         );
     }
-
+    
+    // Método parar validar retorno em JSON
     public function testValidaSaidaDeJSON()
     {
         $displayer = new Displayer($this->getCliente(), new JSONType);
